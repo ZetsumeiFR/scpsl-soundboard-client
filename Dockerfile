@@ -9,7 +9,7 @@ WORKDIR /app
 
 # Build argument for API URL (required at build time for Vite)
 ARG VITE_API_URL
-ENV VITE_API_URL=$VITE_API_URL
+ENV VITE_API_URL=https://api.soundboard.zetsumei.xyz
 
 # Copy package files
 COPY package.json bun.lock ./
