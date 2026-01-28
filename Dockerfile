@@ -20,8 +20,8 @@ RUN bun install --frozen-lockfile
 # Copy source code
 COPY . .
 
-# Build the application
-RUN bun run build
+# Build the application (bypass package.json to avoid symlink issues)
+RUN bun ./node_modules/vite/bin/vite.js build
 
 # ============================================
 # Production stage
